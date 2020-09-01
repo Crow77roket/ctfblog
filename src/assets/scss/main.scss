@@ -1,0 +1,52 @@
+@import "color";
+
+$myFont: Avenir, Helvetica, Arial, sans-serif;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: $background_dark;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  color: $font_dark;
+  font-family: $myFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.dark_theme {
+  .note {
+    color: $note_dark;
+  }
+
+  h1 {
+    color: $main_dark;
+  }
+
+  #app_header {
+    background: $secondary_dark;
+
+    #nav {
+      a {
+        font-weight: bold;
+        color: $unselected_dark;
+
+        &.router-link-exact-active {
+          color: $selected_dark;
+        }
+      }
+    }
+  }
+}
+
+.bright_theme {
+  .note {
+    color: $note;
+  }
+}
